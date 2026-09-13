@@ -132,4 +132,3 @@ def test_server_error_middleware():
     client_raising = TestClient(middleware, raise_server_exceptions=True)
     with pytest.raises(RuntimeError, match="Unexpected failure"):
         client_raising.get("/")
-
